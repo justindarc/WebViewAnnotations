@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebViewAnnotationsViewController.h"
 
 @class WebViewAnnotationsViewController;
 

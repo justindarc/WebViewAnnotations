@@ -24,6 +24,10 @@
 		D033E5F213C196E00019796D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D033E5F013C196E00019796D /* InfoPlist.strings */; };
 		D033E5F413C196E00019796D /* WebViewAnnotationsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = D033E5F313C196E00019796D /* WebViewAnnotationsTests.h */; };
 		D033E5F613C196E00019796D /* WebViewAnnotationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D033E5F513C196E00019796D /* WebViewAnnotationsTests.m */; };
+		D03F9D7A13C19A9A00D8B3C0 /* Test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D03F9D7913C19A9A00D8B3C0 /* Test.pdf */; };
+		D03F9D8113C1A7D900D8B3C0 /* DSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03F9D8013C1A7D900D8B3C0 /* DSWebView.m */; };
+		D03F9D8813C2423E00D8B3C0 /* DSWebAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03F9D8713C2423E00D8B3C0 /* DSWebAnnotationView.m */; };
+		D03F9D8B13C2CAEC00D8B3C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03F9D8A13C2CAEC00D8B3C0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +45,11 @@
 		D033E5C413C196E00019796D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D033E5C613C196E00019796D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D033E5C813C196E00019796D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D033E5CC13C196E00019796D /* WebViewAnnotations-Info.plist */ = {isa = PBXFileReference; path = "WebViewAnnotations-Info.plist"; sourceTree = "<group>"; };
+		D033E5CC13C196E00019796D /* WebViewAnnotations-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewAnnotations-Info.plist"; sourceTree = "<group>"; };
 		D033E5CE13C196E00019796D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D033E5D013C196E00019796D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D033E5D213C196E00019796D /* WebViewAnnotations-Prefix.pch */ = {isa = PBXFileReference; path = "WebViewAnnotations-Prefix.pch"; sourceTree = "<group>"; };
-		D033E5D313C196E00019796D /* WebViewAnnotationsAppDelegate.h */ = {isa = PBXFileReference; path = WebViewAnnotationsAppDelegate.h; sourceTree = "<group>"; };
+		D033E5D213C196E00019796D /* WebViewAnnotations-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebViewAnnotations-Prefix.pch"; sourceTree = "<group>"; };
+		D033E5D313C196E00019796D /* WebViewAnnotationsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewAnnotationsAppDelegate.h; sourceTree = "<group>"; };
 		D033E5D413C196E00019796D /* WebViewAnnotationsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewAnnotationsAppDelegate.m; sourceTree = "<group>"; };
 		D033E5D613C196E00019796D /* WebViewAnnotationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewAnnotationsViewController.h; sourceTree = "<group>"; };
 		D033E5D813C196E00019796D /* WebViewAnnotationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewAnnotationsViewController.m; sourceTree = "<group>"; };
@@ -53,10 +57,16 @@
 		D033E5DE13C196E00019796D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WebViewAnnotationsViewController_iPad.xib; sourceTree = "<group>"; };
 		D033E5E513C196E00019796D /* WebViewAnnotationsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewAnnotationsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D033E5E613C196E00019796D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D033E5EF13C196E00019796D /* WebViewAnnotationsTests-Info.plist */ = {isa = PBXFileReference; path = "WebViewAnnotationsTests-Info.plist"; sourceTree = "<group>"; };
+		D033E5EF13C196E00019796D /* WebViewAnnotationsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewAnnotationsTests-Info.plist"; sourceTree = "<group>"; };
 		D033E5F113C196E00019796D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D033E5F313C196E00019796D /* WebViewAnnotationsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewAnnotationsTests.h; sourceTree = "<group>"; };
 		D033E5F513C196E00019796D /* WebViewAnnotationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewAnnotationsTests.m; sourceTree = "<group>"; };
+		D03F9D7913C19A9A00D8B3C0 /* Test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test.pdf; sourceTree = "<group>"; };
+		D03F9D7F13C1A7D800D8B3C0 /* DSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebView.h; sourceTree = "<group>"; };
+		D03F9D8013C1A7D900D8B3C0 /* DSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebView.m; sourceTree = "<group>"; };
+		D03F9D8613C2423E00D8B3C0 /* DSWebAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebAnnotationView.h; sourceTree = "<group>"; };
+		D03F9D8713C2423E00D8B3C0 /* DSWebAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebAnnotationView.m; sourceTree = "<group>"; };
+		D03F9D8A13C2CAEC00D8B3C0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,7 @@
 				D033E5C513C196E00019796D /* UIKit.framework in Frameworks */,
 				D033E5C713C196E00019796D /* Foundation.framework in Frameworks */,
 				D033E5C913C196E00019796D /* CoreGraphics.framework in Frameworks */,
+				D03F9D8B13C2CAEC00D8B3C0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +120,7 @@
 				D033E5C413C196E00019796D /* UIKit.framework */,
 				D033E5C613C196E00019796D /* Foundation.framework */,
 				D033E5C813C196E00019796D /* CoreGraphics.framework */,
+				D03F9D8A13C2CAEC00D8B3C0 /* QuartzCore.framework */,
 				D033E5E613C196E00019796D /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
@@ -123,6 +135,10 @@
 				D033E5D813C196E00019796D /* WebViewAnnotationsViewController.m */,
 				D033E5DA13C196E00019796D /* WebViewAnnotationsViewController_iPhone.xib */,
 				D033E5DD13C196E00019796D /* WebViewAnnotationsViewController_iPad.xib */,
+				D03F9D7F13C1A7D800D8B3C0 /* DSWebView.h */,
+				D03F9D8013C1A7D900D8B3C0 /* DSWebView.m */,
+				D03F9D8613C2423E00D8B3C0 /* DSWebAnnotationView.h */,
+				D03F9D8713C2423E00D8B3C0 /* DSWebAnnotationView.m */,
 				D033E5CB13C196E00019796D /* Supporting Files */,
 			);
 			path = WebViewAnnotations;
@@ -131,6 +147,7 @@
 		D033E5CB13C196E00019796D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D03F9D7913C19A9A00D8B3C0 /* Test.pdf */,
 				D033E5CC13C196E00019796D /* WebViewAnnotations-Info.plist */,
 				D033E5CD13C196E00019796D /* InfoPlist.strings */,
 				D033E5D013C196E00019796D /* main.m */,
@@ -232,6 +249,7 @@
 				D033E5D713C196E00019796D /* WebViewAnnotationsViewController.h in Resources */,
 				D033E5DC13C196E00019796D /* WebViewAnnotationsViewController_iPhone.xib in Resources */,
 				D033E5DF13C196E00019796D /* WebViewAnnotationsViewController_iPad.xib in Resources */,
+				D03F9D7A13C19A9A00D8B3C0 /* Test.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +288,8 @@
 				D033E5D113C196E00019796D /* main.m in Sources */,
 				D033E5D513C196E00019796D /* WebViewAnnotationsAppDelegate.m in Sources */,
 				D033E5D913C196E00019796D /* WebViewAnnotationsViewController.m in Sources */,
+				D03F9D8113C1A7D900D8B3C0 /* DSWebView.m in Sources */,
+				D03F9D8813C2423E00D8B3C0 /* DSWebAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +400,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebViewAnnotations/WebViewAnnotations-Prefix.pch";
 				INFOPLIST_FILE = "WebViewAnnotations/WebViewAnnotations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,6 +412,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebViewAnnotations/WebViewAnnotations-Prefix.pch";
 				INFOPLIST_FILE = "WebViewAnnotations/WebViewAnnotations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -449,6 +471,7 @@
 				D033E5FB13C196E00019796D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D033E5FC13C196E00019796D /* Build configuration list for PBXNativeTarget "WebViewAnnotationsTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +480,7 @@
 				D033E5FE13C196E00019796D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

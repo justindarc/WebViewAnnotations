@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DSWebView.h"
 
-@interface WebViewAnnotationsViewController : UIViewController
+#define kDocumentFileName	@"Test"
+#define kDocumentFileType	@"pdf"
+
+@interface WebViewAnnotationsViewController : UIViewController <UIWebViewDelegate, DSWebViewDataSource>
+
+@property (strong, nonatomic) IBOutlet DSWebView *webView;
+
+@property (strong, nonatomic) NSArray *annotations;
 
 @end
