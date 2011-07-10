@@ -11,24 +11,30 @@
 @implementation WebViewAnnotationsAppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize navigationController = _navigationController;
+@synthesize webViewAnnotationsViewController = _webViewAnnotationsViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-	// Override point for customization after application launch.
-	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	_window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-		self.viewController = [[WebViewAnnotationsViewController alloc] initWithNibName:@"WebViewAnnotationsViewController_iPhone"
-																				 bundle:nil]; 
+		_webViewAnnotationsViewController =
+			[[WebViewAnnotationsViewController alloc] initWithNibName:@"WebViewAnnotationsViewController_iPhone"
+															   bundle:nil];
 	} else {
-		self.viewController = [[WebViewAnnotationsViewController alloc] initWithNibName:@"WebViewAnnotationsViewController_iPad"
-																				 bundle:nil]; 
+		_webViewAnnotationsViewController =
+			[[WebViewAnnotationsViewController alloc] initWithNibName:@"WebViewAnnotationsViewController_iPad"
+															   bundle:nil];
 	}
 	
-	self.window.rootViewController = self.viewController;
+	_webViewAnnotationsViewController.title = @"Web View";
 	
-	[self.window makeKeyAndVisible];
+	_navigationController = [[UINavigationController alloc] initWithRootViewController:_webViewAnnotationsViewController];
+	_navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	
+	_window.rootViewController = _navigationController;
+	
+	[_window makeKeyAndVisible];
 	
     return YES;
 }

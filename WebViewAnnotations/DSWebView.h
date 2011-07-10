@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "DSWebAnnotationView.h"
+#import "DSAnnotationView.h"
 
 @protocol DSWebViewDataSource;
+@protocol DSWebViewDelegate;
 
-@interface DSWebView : UIWebView {
+@interface DSWebView : UIWebView <UIGestureRecognizerDelegate> {
 	NSArray *annotations;
 	CGPoint offset;
 	CGFloat scale;
@@ -20,16 +21,25 @@
 }
 
 @property (strong, nonatomic) IBOutlet id<DSWebViewDataSource> dataSource;
+@property (strong, nonatomic) IBOutlet id<DSWebViewDelegate> annotationDelegate;
 
 @property (strong, nonatomic, readonly, getter = scrollView) UIScrollView *scrollView;
+@property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 
 - (void)reloadAnnotationData;
+- (void)didTapWithGestureRecognizer:(UITapGestureRecognizer *)tapGestureRecognizer;
 
 @end
 
 @protocol DSWebViewDataSource <NSObject>
 
 - (NSUInteger)numberOfAnnotationsInWebView:(DSWebView *)webView;
-- (DSWebAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index;
+- (DSAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index;
+
+@end
+
+@protocol DSWebViewDelegate <NSObject>
+
+- (void)didReceiveTapAtAnnotationPosition:(CGPoint)position;
 
 @end

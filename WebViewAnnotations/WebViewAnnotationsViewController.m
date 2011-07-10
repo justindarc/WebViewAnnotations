@@ -28,25 +28,7 @@
 	
     [_webView loadRequest:request];
 	
-	_webView.dataSource = self;
-	
-	NSMutableArray *annotations = [NSMutableArray array];
-	
-	for (NSUInteger index = 0; index < 1; index++) {
-		CGPoint position = CGPointMake(50, 70);
-		
-		NSString *title = [NSString stringWithFormat:@"%d", index + 1];
-		
-		UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 100)];
-		contentView.backgroundColor = [UIColor blackColor];
-		
-		DSWebAnnotationView *annotation = [[DSWebAnnotationView alloc] initWithPosition:position
-																				  title:title
-																			contentView:contentView];
-		[annotations addObject:annotation];
-	}
-	
-	_annotations = [[NSArray alloc] initWithArray:annotations];
+	_annotations = [[NSMutableArray alloc] init];
 }
 
 - (void)viewDidUnload {
@@ -79,7 +61,7 @@
 	}
 }
 
-#pragma mark - Web view delegate
+#pragma mark - UIWebViewDelegate
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
 	
@@ -99,14 +81,28 @@
 	
 }
 
-#pragma mark - Web view data source
+#pragma mark - DSWebViewDataSource
 
 - (NSUInteger)numberOfAnnotationsInWebView:(DSWebView *)webView {
 	return [_annotations count];
 }
 
-- (DSWebAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index {
+- (DSAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index {
 	return [_annotations objectAtIndex:index];
+}
+
+#pragma mark - DSWebViewDelegate
+
+- (void)didReceiveTapAtAnnotationPosition:(CGPoint)position {	
+	NSString *title = [NSString stringWithFormat:@"%d", [_annotations count] + 1];
+	UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 100)];
+	contentView.backgroundColor = [UIColor blackColor];
+	
+	DSAnnotationView *annotation = [[DSAnnotationView alloc] initWithPosition:position
+																		title:title
+																  contentView:contentView];
+	[_annotations addObject:annotation];
+	[_webView reloadAnnotationData];
 }
 
 @end

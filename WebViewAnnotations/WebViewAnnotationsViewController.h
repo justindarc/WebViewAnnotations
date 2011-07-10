@@ -12,10 +12,10 @@
 #define kDocumentFileName	@"Test"
 #define kDocumentFileType	@"pdf"
 
-@interface WebViewAnnotationsViewController : UIViewController <UIWebViewDelegate, DSWebViewDataSource>
+@interface WebViewAnnotationsViewController : UIViewController <UIWebViewDelegate, DSWebViewDataSource, DSWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet DSWebView *webView;
 
-@property (strong, nonatomic) NSArray *annotations;
+@property (strong, nonatomic) NSMutableArray *annotations;
 
 @end

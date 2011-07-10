@@ -26,7 +26,7 @@
 		D033E5F613C196E00019796D /* WebViewAnnotationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D033E5F513C196E00019796D /* WebViewAnnotationsTests.m */; };
 		D03F9D7A13C19A9A00D8B3C0 /* Test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D03F9D7913C19A9A00D8B3C0 /* Test.pdf */; };
 		D03F9D8113C1A7D900D8B3C0 /* DSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03F9D8013C1A7D900D8B3C0 /* DSWebView.m */; };
-		D03F9D8813C2423E00D8B3C0 /* DSWebAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03F9D8713C2423E00D8B3C0 /* DSWebAnnotationView.m */; };
+		D03F9D8813C2423E00D8B3C0 /* DSAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03F9D8713C2423E00D8B3C0 /* DSAnnotationView.m */; };
 		D03F9D8B13C2CAEC00D8B3C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03F9D8A13C2CAEC00D8B3C0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +64,8 @@
 		D03F9D7913C19A9A00D8B3C0 /* Test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test.pdf; sourceTree = "<group>"; };
 		D03F9D7F13C1A7D800D8B3C0 /* DSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebView.h; sourceTree = "<group>"; };
 		D03F9D8013C1A7D900D8B3C0 /* DSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebView.m; sourceTree = "<group>"; };
-		D03F9D8613C2423E00D8B3C0 /* DSWebAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebAnnotationView.h; sourceTree = "<group>"; };
-		D03F9D8713C2423E00D8B3C0 /* DSWebAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebAnnotationView.m; sourceTree = "<group>"; };
+		D03F9D8613C2423E00D8B3C0 /* DSAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAnnotationView.h; sourceTree = "<group>"; };
+		D03F9D8713C2423E00D8B3C0 /* DSAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAnnotationView.m; sourceTree = "<group>"; };
 		D03F9D8A13C2CAEC00D8B3C0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -137,8 +137,8 @@
 				D033E5DD13C196E00019796D /* WebViewAnnotationsViewController_iPad.xib */,
 				D03F9D7F13C1A7D800D8B3C0 /* DSWebView.h */,
 				D03F9D8013C1A7D900D8B3C0 /* DSWebView.m */,
-				D03F9D8613C2423E00D8B3C0 /* DSWebAnnotationView.h */,
-				D03F9D8713C2423E00D8B3C0 /* DSWebAnnotationView.m */,
+				D03F9D8613C2423E00D8B3C0 /* DSAnnotationView.h */,
+				D03F9D8713C2423E00D8B3C0 /* DSAnnotationView.m */,
 				D033E5CB13C196E00019796D /* Supporting Files */,
 			);
 			path = WebViewAnnotations;
@@ -289,7 +289,7 @@
 				D033E5D513C196E00019796D /* WebViewAnnotationsAppDelegate.m in Sources */,
 				D033E5D913C196E00019796D /* WebViewAnnotationsViewController.m in Sources */,
 				D03F9D8113C1A7D900D8B3C0 /* DSWebView.m in Sources */,
-				D03F9D8813C2423E00D8B3C0 /* DSWebAnnotationView.m in Sources */,
+				D03F9D8813C2423E00D8B3C0 /* DSAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
