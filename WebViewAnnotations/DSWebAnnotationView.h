@@ -7,16 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface DSWebAnnotationView : UIView {
 	UIButton *button;
 }
 
 @property (nonatomic) CGPoint position;
-@property (strong, nonatomic) UIView *contentView;
+@property (strong, nonatomic) UIView *expandedView;
+@property (strong, nonatomic) UIView *editingView;
 
-- (void)toggleContentView;
+@property (nonatomic, setter = setExpandable:) BOOL isExpandable;
+@property (nonatomic, setter = setExpanded:) BOOL isExpanded;
 
-- (id)initWithPosition:(CGPoint)position title:(NSString *)title contentView:(UIView *)contentView;
+@property (nonatomic, setter = setEditable:) BOOL isEditable;
+@property (nonatomic, setter = setEditing:) BOOL isEditing;
+
+@property (nonatomic, setter = setSelectable:) BOOL isSelectable;
+@property (nonatomic, setter = setSelected:) BOOL isSelected;
+
+- (id)initWithPosition:(CGPoint)position
+				 title:(NSString *)title
+		  expandedView:(UIView *)expandedView
+		   editingView:(UIView *)editingView;
 
 @end

@@ -14,6 +14,7 @@
 @synthesize annotationDelegate = _annotationDelegate;
 @synthesize scrollView = _scrollView;
 @synthesize tapGestureRecognizer = _tapGestureRecognizer;
+@synthesize isEditable = _isEditable;
 
 - (UIScrollView *)scrollView {
 	if (_scrollView != nil) {
@@ -34,12 +35,12 @@
 	NSUInteger count = (_dataSource != nil) ? [_dataSource numberOfAnnotationsInWebView:self] : 0;
 	NSMutableArray *annotationList = [NSMutableArray arrayWithCapacity:count];
 	
-	for (DSAnnotationView *annotation in annotations) {
+	for (DSWebAnnotationView *annotation in annotations) {
 		[annotation removeFromSuperview];
 	}
 	
 	for (NSUInteger index = 0; index < count; index++) {
-		DSAnnotationView *annotation = [_dataSource webView:self annotationForIndex:index];
+		DSWebAnnotationView *annotation = [_dataSource webView:self annotationForIndex:index];
 		[annotationList addObject:annotation];
 		
 		// Add the annotation as a subview.
@@ -100,7 +101,7 @@
 	offset = scrollView.contentOffset;
 	scale = scrollView.zoomScale / scrollView.minimumZoomScale;
 	
-	for (DSAnnotationView *annotation in annotations) {
+	for (DSWebAnnotationView *annotation in annotations) {
 		
 		// Calculate the new frame for the annotation view based on the
 		// annotation's position and the web view's offset and scale.
@@ -122,7 +123,7 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
 	BOOL doesIntersectAnnotation = NO;
 	
-	for (DSAnnotationView *annotation in annotations) {
+	for (DSWebAnnotationView *annotation in annotations) {
 		if (CGRectContainsPoint(annotation.bounds, [touch locationInView:annotation])) {
 			doesIntersectAnnotation = YES;
 			break;

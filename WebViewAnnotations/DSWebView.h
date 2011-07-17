@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "DSAnnotationView.h"
+#import "DSWebAnnotationView.h"
 
 @protocol DSWebViewDataSource;
 @protocol DSWebViewDelegate;
@@ -25,6 +25,7 @@
 
 @property (strong, nonatomic, readonly, getter = scrollView) UIScrollView *scrollView;
 @property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
+@property (nonatomic) BOOL isEditable;
 
 - (void)reloadAnnotationData;
 - (void)didTapWithGestureRecognizer:(UITapGestureRecognizer *)tapGestureRecognizer;
@@ -34,7 +35,7 @@
 @protocol DSWebViewDataSource <NSObject>
 
 - (NSUInteger)numberOfAnnotationsInWebView:(DSWebView *)webView;
-- (DSAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index;
+- (DSWebAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index;
 
 @end
 

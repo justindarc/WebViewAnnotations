@@ -87,7 +87,7 @@
 	return [_annotations count];
 }
 
-- (DSAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index {
+- (DSWebAnnotationView *)webView:(DSWebView *)webView annotationForIndex:(NSUInteger)index {
 	return [_annotations objectAtIndex:index];
 }
 
@@ -95,12 +95,13 @@
 
 - (void)didReceiveTapAtAnnotationPosition:(CGPoint)position {	
 	NSString *title = [NSString stringWithFormat:@"%d", [_annotations count] + 1];
-	UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 100)];
-	contentView.backgroundColor = [UIColor blackColor];
+	UIView *expandedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 100)];
+	expandedView.backgroundColor = [UIColor blackColor];
 	
-	DSAnnotationView *annotation = [[DSAnnotationView alloc] initWithPosition:position
-																		title:title
-																  contentView:contentView];
+	DSWebAnnotationView *annotation = [[DSWebAnnotationView alloc] initWithPosition:position
+																			  title:title
+																		expandedView:expandedView
+																		editingView:nil];
 	[_annotations addObject:annotation];
 	[_webView reloadAnnotationData];
 }
